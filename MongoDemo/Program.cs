@@ -32,7 +32,7 @@ namespace MongoDemo
         public static IMongoCollection<Book> _booksCollection;
         public static void Main(string[] args)
         {
-            var settings = MongoClientSettings.FromConnectionString("mongodb://ranahamid:cZSfTuxXppA8Wcfg@ranahamid-shard-00-00.pploi.mongodb.net:27017,ranahamid-shard-00-01.pploi.mongodb.net:27017,ranahamid-shard-00-02.pploi.mongodb.net:27017/test?ssl=true&replicaSet=atlas-az72h9-shard-0&authSource=admin&retryWrites=true&w=majority");
+            var settings = MongoClientSettings.FromConnectionString("mongodb://ranahamid:bRaB5pXMvrP7w25n@ranahamid-shard-00-00.pploi.mongodb.net:27017,ranahamid-shard-00-01.pploi.mongodb.net:27017,ranahamid-shard-00-02.pploi.mongodb.net:27017/test?ssl=true&replicaSet=atlas-az72h9-shard-0&authSource=admin&retryWrites=true&w=majority");
             var mongoClient = new MongoClient(settings);
             var mongoDatabase = mongoClient.ListDatabaseNames().ToList();
              
@@ -45,7 +45,7 @@ namespace MongoDemo
                 Author = "TEST",
                 BookName = "Book",
                 Category = "1",
-             Id = "3"
+                //Id = "3"
             };
            CreateAsync(newBook);
 
